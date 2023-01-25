@@ -123,9 +123,9 @@
                     </li>
                   </ul>
                 </fieldset>
-                <div>
-                  <button class="button" type="button">Применить</button>
-                  <button class="button" type="button">Сбросить</button>
+                <div class="form-buttons">
+                  <button class="apply-button button" type="button">Применить</button>
+                  <button class="reset-button button" type="button">Сбросить</button>
                 </div>
               </form>
             </section>
@@ -133,19 +133,43 @@
         </header>
         <section class="catalog-hotels">
           <div class="catalog-hotels-selector-container">
-            <h2 class="catalog-hotels-title">Найдено гостиниц: <span>38</span></h2>
+            <h2 class="slogan">Найдено гостиниц: <span>38</span></h2>
             <select class="select-control" aria-label="Сортировка">
               <option value="cheap">Сначала дешёвые</option>
             </select>
-            <a class="button button-current" href="#">
-              <span class="visually-hidden">Показать мелкие карточки</span>
-            </a>
-            <a class="button" href="#">
-              <span class="visually-hidden">Показать крупные карточки</span>
-            </a>
-            <a class="button" href="#">
-              <span class="visually-hidden">Показать список</span>
-            </a>
+            <div class="visualization-buttons">
+              <a class="button button-current" href="#">
+                <span class="visually-hidden">Показать мелкие карточки</span>
+                <svg width="16" height="14" viewBox="0 0 16 14">
+                  <path d="M4 0H0V6H4V0Z" fill="black"/>
+                  <path d="M16 0H12V6H16V0Z" fill="black"/>
+                  <path d="M10 0H6V6H10V0Z" fill="black"/>
+                  <path d="M4 8H0V14H4V8Z" fill="black"/>
+                  <path d="M16 8H12V14H16V8Z" fill="black"/>
+                  <path d="M10 8H6V14H10V8Z" fill="black"/>
+                </svg>
+              </a>
+              <a class="button" href="#">
+                <span class="visually-hidden">Показать крупные карточки</span>
+                <svg width="16" height="14" viewBox="0 0 16 14">
+                  <path d="M16 12H0V14H16V12Z" fill="black"/>
+                  <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
+                </svg>
+              </a>
+              <a class="button" href="#">
+                <span class="visually-hidden">Показать списком</span>
+                <svg width="16" height="14" viewBox="0 0 16 14">
+                  <path d="M2 0H0V2H2V0Z" fill="black"/>
+                  <path d="M16 0H4V2H16V0Z" fill="black"/>
+                  <path d="M2 4H0V6H2V4Z" fill="black"/>
+                  <path d="M16 4H4V6H16V4Z" fill="black"/>
+                  <path d="M2 8H0V10H2V8Z" fill="black"/>
+                  <path d="M16 8H4V10H16V8Z" fill="black"/>
+                  <path d="M2 12H0V14H2V12Z" fill="black"/>
+                  <path d="M16 12H4V14H16V12Z" fill="black"/>
+                </svg>
+              </a>
+            </div>
           </div>
           <ul class="hotel-list">
             <li class="hotel-card">
@@ -155,9 +179,14 @@
               </a>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 4000 ₽</p>
-              <a class="hotel-card-about-button button" href="#">подробнее</a>
-              <a class="hotel-card-chose-button button" href="#">в избранное</a>
-              <p class="hotel-card-rating">Рейтинг: <span>8,5</span></p>
+              <div class="hotel-card-buttons">
+                <a class="hotel-card-about-button button" href="#">подробнее</a>
+                <a class="hotel-card-chose-button button" href="#">в избранное</a>
+              </div>
+              <div class="hotel-card-statisic">
+                <p class="hotel-card-stars"><span class="visually-hidden">Количество звезд</span></p>
+                <p class="hotel-card-rating">Рейтинг: <span>8,5</span></p>
+              </div>
             </li>
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
@@ -166,9 +195,14 @@
               </a>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 5000 ₽</p>
-              <a class="hotel-card-about-button button" href="#">подробнее</a>
-              <a class="hotel-card-chose-button button" href="#">в избранном</a>
-              <p class="hotel-card-rating">Рейтинг: <span>9,2</span></p>
+              <div class="hotel-card-buttons">
+                <a class="hotel-card-about-button button" href="#">подробнее</a>
+                <a class="hotel-card-chose-button button" href="#">в избранное</a>
+              </div>
+              <div class="hotel-card-statisic">
+                <p class="hotel-card-stars"><span class="visually-hidden">Количество звезд</span></p>
+                <p class="hotel-card-rating">Рейтинг: <span>9,2</span></p>
+              </div>
             </li>
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
@@ -177,9 +211,14 @@
               </a>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 2500 ₽</p>
-              <a class="hotel-card-about-button button" href="#">подробнее</a>
-              <a class="hotel-card-chose-button button" href="#">в избранное</a>
-              <p class="hotel-card-rating">Рейтинг: <span>6,9</span></p>
+              <div class="hotel-card-buttons">
+                <a class="hotel-card-about-button button" href="#">подробнее</a>
+                <a class="hotel-card-chose-button button" href="#">в избранное</a>
+              </div>
+              <div class="hotel-card-statisic">
+                <p class="hotel-card-stars"><span class="visually-hidden">Количество звезд</span></p>
+                <p class="hotel-card-rating">Рейтинг: <span>6,9</span></p>
+              </div>
             </li>
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
@@ -188,9 +227,14 @@
               </a>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 1500 ₽</p>
-              <a class="hotel-card-about-button button" href="#">подробнее</a>
-              <a class="hotel-card-chose-button button" href="#">в избранное</a>
-              <p class="hotel-card-rating">Рейтинг: <span>5,0</span></p>
+              <div class="hotel-card-buttons">
+                <a class="hotel-card-about-button button" href="#">подробнее</a>
+                <a class="hotel-card-chose-button button" href="#">в избранное</a>
+              </div>
+              <div class="hotel-card-statisic">
+                <p class="hotel-card-stars"><span class="visually-hidden">Количество звезд</span></p>
+                <p class="hotel-card-rating">Рейтинг: <span>5,0</span></p>
+              </div>
             </li>
           </ul>
           <ul class="pagination">
