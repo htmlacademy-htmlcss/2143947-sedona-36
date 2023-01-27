@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -45,7 +46,6 @@ body {
   width: 1200px;
   background-color: #FFFFFF;
   box-shadow: 0 0 15px #00000020;
-  margin: 0;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -62,6 +62,7 @@ body {
   margin-right: 70px;
   gap: 28px;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .navigation {
@@ -69,14 +70,30 @@ body {
   list-style: none;
   justify-content: space-between;
   width: 100%;
+  min-height: 65px;
 }
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
   align-items: center;
+}
+
+.current-item {
+  position: relative;
+}
+
+.current-item::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 32px);
+  height: 2px;
+  left: 16px;
+  top: 44px;
+  background-color: #756257;
 }
 
 .navigation-link {
@@ -94,6 +111,7 @@ body {
   background-repeat: no-repeat;
   background-size: 18px 18px;
   background-position: center center;
+  width: 44px;
 }
 
 .navigation-user .navigation-item:nth-of-type(2) {
@@ -101,6 +119,30 @@ body {
   background-repeat: no-repeat;
   background-size: 18px 17px;
   background-position: center center;
+  width: 44px;
+}
+
+.navigation-user-link {
+  padding: 22px;
+  position: relative;
+}
+
+.chosen-count {
+  content: "";
+  position: absolute;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  right: 0;
+  top: 16px;
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
@@ -110,10 +152,26 @@ body {
   border-radius: 4px;
 }
 
+.button:hover,
+.button:focus {
+  background-color: #615048;
+}
+
+.button:active {
+  background-color: #756157;
+  color: #FFFFFF30;
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
+}
+
 .navigation-user-button {
   padding: 8px 34px 8px 34px;
   font-size: 16px;
   line-height: 20px;
+  margin-left: 20px;
 }
 
 /* INDEX-MAIN */
@@ -136,6 +194,7 @@ body {
   height: 485px;
   background-repeat: no-repeat;
   margin-bottom: 70px;
+  margin-top: -5px;
 }
 
 .welcome-slogan {
@@ -180,7 +239,15 @@ body {
   text-align: center;
   align-items: center;
   width: 400px;
-  height: 384px;
+  min-height: 384px;
+  position: relative;
+}
+
+.advantages-item::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
 }
 
 .text-container {
@@ -204,10 +271,24 @@ body {
   width: 100%;
 }
 
+.advantages-item:nth-of-type(1)::before {
+  background-color: #FFFFFF30;
+  top: calc(50% - 7px);
+  left: 170px;
+}
+
 .advantages-item:nth-of-type(2) {
   flex-direction: column;
   justify-content: center;
   background-color: #82B3D312;
+}
+
+.advantages-item:nth-of-type(2)::before,
+.advantages-item:nth-of-type(3)::before,
+.advantages-item:nth-of-type(4)::before {
+  background-color: #00000030;
+  top: calc(50% + 7px);
+  left: 170px;
 }
 
 .advantages-item:nth-of-type(3) {
@@ -223,9 +304,16 @@ body {
 }
 
 .advantages-item:nth-of-type(5) {
+  flex-direction: row-reverse;
   color: #FFFFFF;
   background-color: #82B3D3;
   width: 100%;
+}
+
+.advantages-item:nth-of-type(5)::before {
+  background-color: #FFFFFF30;
+  top: calc(50% - 7px);
+  right: 170px;
 }
 
 .advantages-item:nth-of-type(1) .title-description,
@@ -354,6 +442,15 @@ body {
   border-radius: 0 4px 4px 0;
   border: none;
   padding: 8px 50px 8px 50px;
+}
+
+.subscribe-form-button:hover,
+.subscribe-form-button:focus {
+  background-color: #68A2CA;
+}
+
+.subscribe-form-button:active {
+  background-color: #82B3D3;
 }
 
 /* CATALOG-MAIN */
@@ -735,20 +832,32 @@ body {
   padding: 0;
 }
 
+.social-button {
+  background-color: unset;
+  fill: #83B3D3;
+}
+
+.social-button:hover,
+.social-button:focus {
+  fill: #68A2CA;
+}
+
+.social-button:active {
+  fill: #68A2CA30;
+}
+
 .vk-button {
   padding: 12px 13px 12px 13px;
-  background-color: unset;
 }
 
 .telegram-button {
   padding: 12px 15px 13px 15px;
-  background-color: unset;
 }
 
 .youtube-button {
   padding: 12px 13px 12px 13px;
-  background-color: unset;
 }
+
 
 .footer-contacts-address-phone {
   font-size: 40px;
@@ -756,4 +865,26 @@ body {
   color: #000000;
   text-decoration: none;
   padding: 5px 195px 5px 195px;
+}
+
+.footer-contacts-address-phone:hover,
+.footer-contacts-address-phone:focus {
+  color: #756157;
+}
+
+.footer-contacts-address-phone:active {
+  color: #75615730;
+}
+
+.htmlacademy-logo {
+  fill: #000000;
+}
+
+.htmlacademy-logo:hover,
+.htmlacademy-logo:focus {
+  fill: #756157;
+}
+
+.htmlacademy-logo:active {
+  fill: #75615730;
 }
