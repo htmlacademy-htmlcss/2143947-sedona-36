@@ -627,7 +627,7 @@ body {
   opacity: 0.6;
 }
 
-.control:focus .control-mark {
+.control:focus-within .control-mark {
   outline: 3px solid #82B3D3;
 }
 
