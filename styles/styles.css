@@ -166,6 +166,7 @@ body {
   background-color: #756157;
   border-radius: 4px;
   outline: none;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -259,7 +260,7 @@ body {
   text-align: center;
   align-items: center;
   width: 400px;
-  min-height: 384px;
+  min-height: 385px;
 }
 
 .text-container {
@@ -606,6 +607,7 @@ body {
   position: relative;
   display: block;
   padding-left: 36px;
+  cursor: pointer;
 }
 
 .control-mark {
@@ -712,6 +714,10 @@ body {
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.range-input::placeholder {
+  opacity: 1;
 }
 
 .range-input:hover {
@@ -1192,4 +1198,285 @@ body {
 
 .htmlacademy-logo:active {
   fill: #75615730;
+}
+
+/* MODAL */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F2F2F280;
+  display: none;
+}
+
+.modal-show {
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  margin-top: 386px;
+  background-color: #FFFFFF;
+  box-shadow: 0 25px 50px #00000015;
+  border-radius: 30px;
+  width: 577px;
+  padding: 64px 70px;
+}
+
+.modal .slogan {
+  margin: 0;
+  text-align: start;
+  margin-bottom: 64px;
+}
+
+.modal-close-button {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  fill: #000000;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  fill: #00000030;
+}
+
+.search-hotel-form-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-right: 46px;
+}
+
+.arrival .form-label {
+  margin-right: 24px;
+}
+
+.leaving .form-label {
+  margin-right: 18px;
+}
+
+.form-input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 20px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  height: 48px;
+}
+
+.form-input::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
+.form-input:hover {
+  background-color: #E6E6E6;
+}
+
+.form-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.form-input:not(:placeholder-shown) {
+  background-color: #F2F2F2;
+  outline: 2px solid #000000;
+}
+
+.arrival::before,
+.leaving::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/calendar-icon.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 15px;
+  top: 16px;
+  right: 22px;
+  opacity: 0.6;
+}
+
+.arrival-date-message {
+  content: "";
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  top: 52px;
+  left: 157px;
+  color: #FF5757;
+}
+
+.leaving-date-message {
+  content: "";
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  top: 52px;
+  left: 157px;
+  color: #333333;
+}
+
+.visitors-count {
+  display: flex;
+  flex-direction: row;
+  gap: 88px;
+}
+
+.information-icon {
+  content: "";
+  position: absolute;
+  background-image: url(../images/information-icon.svg);
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  top: 11px;
+  left: 59px;
+  cursor: pointer;
+  outline: none;
+}
+
+.kids .form-label {
+  margin-right: 82px;
+}
+
+.form-input-container {
+  position: relative;
+}
+
+.form-input-container .form-input {
+  padding: 0;
+  width: 110px;
+  text-align: center;
+}
+
+.count {
+  content: "";
+  position: absolute;
+  fill: #75615730;
+  cursor: pointer;
+  outline: none;
+}
+
+.count:hover {
+  fill: #000000;
+}
+
+.count:focus {
+  fill: #000000;
+  outline: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.count:active {
+  fill: #00000030;
+  outline: none;
+}
+
+.count-minus {
+  top: 14px;
+  left: 10px;
+  padding: 9px 3px;
+}
+
+.count-plus {
+  top: 14px;
+  right: 10px;
+  padding: 3px;
+}
+
+.kids-count-information {
+  content: "";
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background-color: #333333;
+  box-shadow: 0 15px 30px #00000030;
+  border-radius: 10px;
+  width: 216px;
+  padding: 15px 18px 18px 22px;
+  z-index: 1;
+  left: -56px;
+  top: 52px;
+  display: none;
+}
+
+.kids-count-information::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/tooltip-arrow.svg);
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 9px;
+  top: -9px;
+  left: calc(50% - 9.5px);
+}
+
+.information-icon:hover + .kids-count-information,
+.information-icon:focus + .kids-count-information {
+  display: block;
+}
+
+.modal-submit-button {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: #83B3D3;
+}
+
+.modal-submit-button:hover,
+.modal-submit-button:focus {
+  background-color: #68A2CA;
+}
+
+.modal-submit-button:active {
+  background-color: #83B3D3;
+  color: #FFFFFF30;
 }
