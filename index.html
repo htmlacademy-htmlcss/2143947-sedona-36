@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" href="images/favicon.png" type="image/png">
   </head>
   <body>
@@ -40,9 +41,6 @@
                 <span class="chosen-count">
                   12
                 </span>
-                <span class="visually-hidden">
-                  объектов добавлено в избранное.
-                </span>
               </a>
             </li>
             <li class="navigation-item">
@@ -60,7 +58,7 @@
           <p class="slogan-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages-list">
-            <li class="advantages-item">
+            <li class="advantages-item advantages-item-line">
               <div class="text-container">
                 <h3 class="title">Настоящий<br> городок</h3>
                 <p class="title-description">Седона — не аттракцион для<br> туристов, там течёт своя<br> жизнь</p>
@@ -81,7 +79,7 @@
               <h3 class="title">Мало<br> туристов</h3>
               <p class="title-description">Большинство едет в Гранд<br> Каньон и толпится там</p>
             </li>
-            <li class="advantages-item">
+            <li class="advantages-item advantages-item-line advantages-item-line-reverse">
               <div class="text-container">
                 <h3 class="title">Там есть<br> мост дьявола</h3>
                 <p class="title-description">Да, по нему можно пройти!<br> Если вы осмелитесь,<br> разумеется</p>
@@ -198,13 +196,17 @@
               <div class="search-hotel-form-item adults">
                 <label class="form-label" for="adults-count">Взрослые:</label>
                 <div class="form-input-container">
-                  <svg class="count count-minus" tabindex="0" width="14" height="2" viewBox="0 0 14 2">
-                    <path d="M0 0L0 2L14 2V0L0 0Z"/>
-                  </svg>
+                  <button class="count count-minus" type="button">
+                    <svg width="14" height="2" viewBox="0 0 14 2">
+                      <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                    </svg>
+                  </button>
                   <input class="form-input" type="text" id="adults-count" name="adults-count" placeholder="2">
-                  <svg class="count count-plus" tabindex="0" width="14" height="14" viewBox="0 0 14 14">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
-                  </svg>
+                  <button class="count count-plus" type="button">
+                    <svg width="14" height="14" viewBox="0 0 14 14">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  </button>
                 </div>
               </div>
               <div class="search-hotel-form-item kids">
@@ -215,13 +217,17 @@
                 </svg>
                 <span class="kids-count-information">Укажите количество детей,<br> которые будут с вами, возраст<br> которых от 6 до 18 лет. Дети<br> до 6 лет размещаются<br> бесплатно.</span>
                 <div class="form-input-container">
-                  <svg class="count count-minus" tabindex="0" width="14" height="2" viewBox="0 0 14 2">
-                    <path d="M0 0L0 2L14 2V0L0 0Z"/>
-                  </svg>
+                  <button class="count count-minus" type="button">
+                    <svg width="14" height="2" viewBox="0 0 14 2">
+                      <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                    </svg>
+                  </button>
                   <input class="form-input" type="text" id="kids-count" name="kids-count" placeholder="2">
-                  <svg class="count count-plus" tabindex="0" width="14" height="14" viewBox="0 0 14 14">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
-                  </svg>
+                  <button class="count count-plus" type="button">
+                    <svg width="14" height="14" viewBox="0 0 14 14">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>

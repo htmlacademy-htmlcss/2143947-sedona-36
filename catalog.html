@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" href="images/favicon.png" type="image/png">
   </head>
   <body>
@@ -40,9 +41,6 @@
                 <span class="chosen-count">
                   12
                 </span>
-                <span class="visually-hidden">
-                  объектов добавлены в избранное.
-                </span>
               </a>
             </li>
             <li class="navigation-item">
@@ -74,21 +72,18 @@
                     <li class="catalog-filter-item">
                       <label class="control" for="pool">
                         <input class="visually-hidden control-input" type="checkbox" name="pool" id="pool" checked>
-                        <span class="control-mark"></span>
                         <span class="control-description">Бассейн</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control" for="parking">
                         <input class="visually-hidden control-input" type="checkbox" name="parking" id="parking" checked>
-                        <span class="control-mark"></span>
                         <span class="control-description">Парковка</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control" for="wi-fi">
                         <input class="visually-hidden control-input" type="checkbox" name="wi-fi" id="wi-fi">
-                        <span class="control-mark"></span>
                         <span class="control-description">Wi-Fi</span>
                       </label>
                     </li>
@@ -100,21 +95,18 @@
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="placement-type" value="hotel" checked>
-                        <span class="control-mark"></span>
                         <span class="control-description">Гостиница</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="placement-type" value="motel">
-                        <span class="control-mark"></span>
                         <span class="control-description">Мотель</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="placement-type" value="apartment">
-                        <span class="control-mark"></span>
                         <span class="control-description">Апартаменты</span>
                       </label>
                     </li>
@@ -132,8 +124,8 @@
                       <span class="range-input-description">до</span>
                     </label>
                   </div>
-                  <div class="range-scale" style="left: 5px; width: 282px">
-                    <div class="range-bar" style="left: 5px; width: 221px">
+                  <div class="range-scale">
+                    <div class="range-bar">
                       <button class="range-toggle toggle-min">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
@@ -366,24 +358,28 @@
             <div class="search-hotel-form-item arrival">
               <label class="form-label" for="arrival-date">Дата Заезда:</label>
               <input class="form-input" type="text" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020">
-              <span class="arrival-date-message visually-hidden">Мы не можем отправить вас в прошлое.</span>
+              <span class="arrival-date-message">Мы не можем отправить вас в прошлое.</span>
             </div>
             <div class="search-hotel-form-item leaving">
               <label class="form-label" for="leaving-date">Дата Выезда:</label>
               <input class="form-input" type="text" id="leaving-date" name="leaving-date" placeholder="1 сентября 2023">
-              <span class="leaving-date-message visually-hidden">На эти даты есть свободные номера. Пока есть.</span>
+              <span class="leaving-date-message">На эти даты есть свободные номера. Пока есть.</span>
             </div>
             <div class="visitors-count">
               <div class="search-hotel-form-item adults">
                 <label class="form-label" for="adults-count">Взрослые:</label>
                 <div class="form-input-container">
-                  <svg class="count count-minus" tabindex="0" width="14" height="2" viewBox="0 0 14 2">
-                    <path d="M0 0L0 2L14 2V0L0 0Z"/>
-                  </svg>
+                  <button class="count count-minus" type="button">
+                    <svg width="14" height="2" viewBox="0 0 14 2">
+                      <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                    </svg>
+                  </button>
                   <input class="form-input" type="text" id="adults-count" name="adults-count" placeholder="2">
-                  <svg class="count count-plus" tabindex="0" width="14" height="14" viewBox="0 0 14 14">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
-                  </svg>
+                  <button class="count count-plus" type="button">
+                    <svg width="14" height="14" viewBox="0 0 14 14">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  </button>
                 </div>
               </div>
               <div class="search-hotel-form-item kids">
@@ -394,13 +390,17 @@
                 </svg>
                 <span class="kids-count-information">Укажите количество детей,<br> которые будут с вами, возраст<br> которых от 6 до 18 лет. Дети<br> до 6 лет размещаются<br> бесплатно.</span>
                 <div class="form-input-container">
-                  <svg class="count count-minus" tabindex="0" width="14" height="2" viewBox="0 0 14 2">
-                    <path d="M0 0L0 2L14 2V0L0 0Z"/>
-                  </svg>
+                  <button class="count count-minus" type="button">
+                    <svg width="14" height="2" viewBox="0 0 14 2">
+                      <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                    </svg>
+                  </button>
                   <input class="form-input" type="text" id="kids-count" name="kids-count" placeholder="2">
-                  <svg class="count count-plus" tabindex="0" width="14" height="14" viewBox="0 0 14 14">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
-                  </svg>
+                  <button class="count count-plus" type="button">
+                    <svg width="14" height="14" viewBox="0 0 14 14">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>

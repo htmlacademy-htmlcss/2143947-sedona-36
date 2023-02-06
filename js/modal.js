@@ -2,13 +2,11 @@ const searchHotel = document.querySelectorAll(".search-hotel");
 const searchHotelModal = document.querySelector(".modal-container");
 const modalClose = searchHotelModal.querySelector(".modal-close-button");
 
-for (var i = 0; i < searchHotel.length; i++) {
-
-searchHotel[i].addEventListener("click", function (evt) {
-  evt.preventDefault();
-  searchHotelModal.classList.add("modal-show");
-});
-
+for (let i = 0; i < searchHotel.length; i++) {
+  searchHotel[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    searchHotelModal.classList.add("modal-show");
+  });
 }
 
 modalClose.addEventListener("click", function (evt) {
