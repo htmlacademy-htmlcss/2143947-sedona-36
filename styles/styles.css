@@ -1355,7 +1355,6 @@ body {
 }
 
 .arrival-date-message {
-  content: "";
   position: absolute;
   font-weight: 400;
   font-size: 16px;
@@ -1366,7 +1365,6 @@ body {
 }
 
 .leaving-date-message {
-  content: "";
   position: absolute;
   font-weight: 400;
   font-size: 16px;
@@ -1383,7 +1381,6 @@ body {
 }
 
 .information-icon {
-  content: "";
   position: absolute;
   background-image: url(../images/information-icon.svg);
   background-repeat: no-repeat;
@@ -1410,7 +1407,6 @@ body {
 }
 
 .count {
-  content: "";
   position: absolute;
   fill: #75615730;
   cursor: pointer;
@@ -1450,7 +1446,6 @@ body {
 }
 
 .kids-count-information {
-  content: "";
   position: absolute;
   font-weight: 400;
   font-size: 16px;
