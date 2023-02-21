@@ -78,6 +78,8 @@ body {
 
 .header-logo-image {
   position: absolute;
+  max-width: 140px;
+  height: auto;
   top: 0;
   left: 0;
   z-index: 1;
@@ -209,7 +211,7 @@ body {
 
 .welcome-slogan-wrapper {
   background-image: url("../images/index-background.jpg");
-  background-color: #83B3D320;
+  background-color: #00000060;
   background-size:  cover;
   background-position: center center;
   width: 100%;
@@ -432,6 +434,7 @@ body {
   margin: auto;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   text-decoration: none;
   padding: 8px 48px 8px 48px;
   width: 376px;
@@ -444,6 +447,7 @@ body {
   background-image: url(../images/index-subscribe-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #00000060;
   color: #FFFFFF;
   width: 100%;
   min-height: 415px;
@@ -478,6 +482,7 @@ body {
   padding-left: 20px;
   display: flex;
   align-items: center;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -515,6 +520,7 @@ body {
   background-image: url(../images/filters-background.jpg);
   background-repeat: no-repeat;
   background-size: 1200px 100%;
+  background-color: #00000060;
   width: 100%;
   min-height: 412px;
   margin-bottom: 50px;
@@ -577,6 +583,11 @@ body {
 
 .breadcrumbs-link:active{
   color: #FFFFFF30;
+}
+
+.breadcrumbs-home-icon {
+  max-width: 12px;
+  height: auto;
 }
 
 /* CATALOG-FILTER-FORM */
@@ -712,6 +723,7 @@ body {
   height: 48px;
   background-color: #F2F2F2;
   border: none;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -805,6 +817,7 @@ body {
   border-radius: 4px;
   border: none;
   padding: 8px 40px 8px 40px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -830,6 +843,7 @@ body {
   border-radius: 4px;
   padding: 5px 50px 5px 50px;
   border: 3px solid transparent;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -885,6 +899,7 @@ body {
   background-size: 12px 7px;
   background-position: 260px center;
   outline: none;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -975,6 +990,8 @@ body {
 }
 
 .hotel-card-image {
+  max-width: 300px;
+  height: auto;
   margin: 0;
   padding: 0;
   margin-bottom: 12px;
@@ -1326,6 +1343,7 @@ body {
 }
 
 .form-input {
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1424,7 +1442,8 @@ body {
 
 .count {
   position: absolute;
-  fill: #75615730;
+  fill: #756157;
+  opacity: 0.3;
   cursor: pointer;
   outline: none;
   border: none;
@@ -1434,20 +1453,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 
 .count:hover {
   fill: #000000;
+  opacity: 1;
 }
 
 .count:focus {
   fill: #000000;
+  opacity: 1;
   outline: 3px solid #82B3D3;
   border-radius: 4px;
 }
 
 .count:active {
-  fill: #00000030;
+  fill: #000000;
+  opacity: 0.3;
   outline: none;
 }
 
@@ -1502,6 +1525,7 @@ body {
   outline: none;
   border: none;
   border-radius: 10px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
